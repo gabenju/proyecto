@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@500;700&family=Open+Sans:wght@300&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* Estilos Generales <------Q(-_-Q)*/
+body{
+    background-color: gray;
+    font-family: 'Bai Jamjuree', sans-serif;
+}
+h1{ 
+    color: lightgray;
+}
+/* Responsive <------Q(-_-Q)*/
+/* DESKTOP */
+@media (min-width: 1024px) {
+
+/* Menu<------Q(-_-Q)*/
+header{
+    height: 200px;
+}
+header img{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+nav a{
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+
+nav a:hover{
+    background-image: linear-gradient(to left, rgb(137, 127, 106), lightgrey);
+}
+/* Index Grid <------Q(-_-Q)*/
+#grid {
+    display: grid;
+    grid-template-areas:
+        "header header header header"
+        "nav foto texto texto"
+        "nav fotos fotos fotos"
+        "footer footer footer footer";
+    grid-template-rows: 190px 1fr 25vh 30px; 
+    grid-template-columns: 20% 50% 30%;
+    grid-column-gap: 5px;
+    grid-row-gap: 10px;
+}
+header {
+    grid-area: header;
+    background-color: rgb(137, 127, 106);
+    font-weight: 1000;
+}
+footer {
+    grid-area: footer;
+        background-color: black;
+        color: white;
+        font-family: garamond;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 0vh;
+}
+
+section#foto {
+    grid-area: foto; 
+    margin-top: 10px;
+}
+section#fotos {
+    grid-area: fotos;     
+}
+nav#titulos {
+    grid-area: nav;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 50px;
+}
+aside {
+    grid-area: texto;
+    margin-top: 10px;
+    margin-left: 35px;
+    padding: 40px;
+    background-image: url(/assets/img/steelfram.jpg);    
+}
+
+/* Contactanos Grid <------Q(-_-Q)*/
+#gridcont {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "sec1 form  sec2"
+        "footer footer footer";
+    grid-template-rows: 200px 70vh 200px; 
+    grid-template-columns: 25% 50% 25%;
+    grid-column-gap: 5px;
+    grid-row-gap: 10px;
+    
+}
+main{
+    grid-area: form;
+    justify-self: center;
+    width: 700px;
+    height: 600px;
+    padding: 100px;
+    background-color: rgb(137, 127, 106);
+}
+p{
+    padding: 10px;
+}
+section#sec1{
+    grid-area: sec1;
+    display: flex;
+    flex-direction: column;    
+}
+section#sec2{
+    grid-area: sec2;
+    display: flex;
+    flex-direction: column;   
+}  
+}
+
+/* TABLET */
+@media (min-width: 481px) and (max-width: 1023px){
+    #grid {
+        display: grid;
+        grid-template-areas:
+            "header"
+            "nav"
+            "foto"
+            "fotos"
+            "footer";
+        grid-template-rows: 190px; 
+        grid-template-columns: 100%;
+        grid-column-gap: 5px;
+        grid-row-gap: 10px;
+    }
+    header{
+        grid-area: header;
+        height: 200px;
+        background-color: rgb(137, 127, 106);
+        font-weight: 1000;
+    }
+    header img{
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-right: 20px;
+    }
+    nav a{
+        text-decoration: none;
+        color: black;
+        padding: 10px;
+    }
+    section#foto {
+        grid-area: foto; 
+        display: none;
+    }
+    section#fotos {
+        grid-area: fotos;     
+    }
+    nav#titulos {
+        grid-area: nav;
+        display: flex;
+        flex-direction: column-reverse;
+        margin-left: 20px;
+        padding 10px;
+    }
+    aside {
+        grid-area: nav;
+        margin-top: 70px;
+        margin-left: 35px;
+
+    }
+    footer {
+        grid-area: footer;
+            background-color: black;
+            color: white;
+            font-family: garamond;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 0vh;
+    }
+/* Contactanos Grid <------Q(-_-Q)*/
+#gridcont {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "sec1 form  sec2"
+        "footer footer footer";
+    grid-template-rows: 200px 70vh 200px; 
+    grid-template-columns: 25% 50% 25%;
+    grid-column-gap: 5px;
+    grid-row-gap: 10px;
+    
+}
+header{
+    grid-area: header;
+    height: 200px;
+    background-color: rgb(137, 127, 106);
+    font-weight: 1000;
+}
+header img{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+nav a{
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+main{
+    grid-area: form;
+    justify-self: center;
+    width: 700px;
+    height: 600px;
+    padding: 100px;
+    background-color: rgb(137, 127, 106);
+}
+p{
+    padding: 10px;
+}
+section#sec1{
+    grid-area: sec1;
+    display: flex;
+    flex-direction: column;   
+}
+section#sec2{
+    grid-area: sec2;
+    display: none 
+}  
+}
+
+
+/* SMARTPHONE */
+@media (max-width: 480px){
+    #grid {
+        display: grid;
+        grid-template-areas:
+            "header"
+            "nav"
+            "foto"
+            "fotos"
+            "footer";
+        grid-template-rows: 190px; 
+        grid-template-columns: 100%;
+        grid-column-gap: 5px;
+        grid-row-gap: 10px;
+    }
+    header{
+        grid-area: header;
+        height: 200px;
+        background-color: rgb(137, 127, 106);
+        font-weight: 1000;
+    }
+    header img{
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-right: 20px;
+    }
+    nav a{
+        text-decoration: none;
+        color: black;
+        padding: 10px;
+    }
+    section#foto{
+        grid-area: foto;
+        display: none; 
+    }
+    section#fotos {
+        grid-area: fotos;     
+    }
+    nav#titulos {
+        grid-area: nav;
+        display: flex;
+        flex-direction: column-reverse;
+        margin-left: 20px;
+    }
+    aside {
+        grid-area: nav;
+        margin-top: 70px;
+        margin-left: 35px;
+
+    }
+    footer {
+        grid-area: footer;
+            background-color: black;
+            color: white;
+            font-family: garamond;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 0vh;
+    }
+/* Contactanos Grid <------Q(-_-Q)*/
+#gridcont {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "sec1 form  sec2"
+        "footer footer footer";
+    grid-template-rows: 200px 70vh 200px; 
+    grid-template-columns: 25% 50% 25%;
+    grid-column-gap: 5px;
+    grid-row-gap: 10px;
+    
+}
+header{
+    grid-area: header;
+    height: 200px;
+    background-color: rgb(137, 127, 106);
+    font-weight: 1000;
+}
+header img{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+nav a{
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+main{
+    grid-area: form;
+    justify-self: center;
+    width: 700px;
+    height: 600px;
+    padding: 100px;
+    background-color: rgb(137, 127, 106);
+}
+p{
+    padding: 10px;
+}
+section#sec1{
+    grid-area: sec1;
+    display: none;
+}
+section#sec2{
+    grid-area: sec2;
+    display: none 
+}  
+}
+
+
+
+/* MEDIA QUERIES */
